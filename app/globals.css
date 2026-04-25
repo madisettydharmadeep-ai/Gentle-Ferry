@@ -1,59 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #1f2937;
-  --foreground: #f8fafc;
-  --primary: #4f46e5;
-  --secondary: #1e293b;
-  --accent: #8b5cf6;
+/*
+ * Whimsical Journal — Design Tokens
+ * ─────────────────────────────────
+ * A cozy warm palette inspired by cream paper,
+ * soft blush, and golden afternoon light.
+ */
+
+@theme {
+  /* Typography — single font throughout */
+  --font-body: "Space Grotesk", system-ui, sans-serif;
+
+  /* Background */
+  --color-cream:        #FFFBF7;   /* page bg */
+  --color-card:         #FFFFFF;   /* card bg */
+  --color-muted:        #F5F0EA;   /* subtle bg accents */
+
+  /* Text */
+  --color-ink:          #2D2926;   /* primary text */
+  --color-ink-soft:     #6B6560;   /* secondary text */
+  --color-ink-faint:    #A8A29E;   /* placeholder / tertiary */
+
+  /* Accent — cozy blush pink */
+  --color-blush:        #E8837C;   /* primary accent */
+  --color-blush-light:  #FFF1EF;   /* accent bg tint */
+  --color-blush-hover:  #D6706A;   /* accent hover */
+
+  /* Supporting warm tones */
+  --color-honey:        #F2C94C;   /* yellow accent */
+  --color-honey-light:  #FFF9E6;   /* yellow bg tint */
+  --color-sage:         #7FB69E;   /* green accent (calm) */
+  --color-lavender:     #B4A7D6;   /* purple accent (grateful) */
+
+  /* Borders */
+  --color-line:         #E8E2DA;   /* default border */
+  --color-line-strong:  #D4CDC3;   /* stronger border */
+
+  /* Shadows */
+  --shadow-sm:  0 1px 4px rgba(45,41,38,0.06);
+  --shadow-md:  0 4px 16px rgba(45,41,38,0.08);
+  --shadow-lg:  0 8px 32px rgba(45,41,38,0.10);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* ── Base ── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    font-family: var(--font-body);
+    background: var(--color-cream);
+    color: var(--color-ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+
+  ::selection { background: var(--color-blush-light); color: var(--color-ink); }
+
+  button:not(:disabled),
+  a[href],
+  [role="button"],
+  label[for],
+  select,
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ── Animations ── */
+@layer utilities {
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn { animation: fadeIn 400ms ease-out both; }
 }
 
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.custom-scrollbar::-webkit-scrollbar {
-    width: 6px;
-}
-.custom-scrollbar::-webkit-scrollbar-track {
-    background: rgba(49, 37, 28, 0.05);
-    border-radius: 10px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb {
-    background: rgba(49, 37, 28, 0.2);
-    border-radius: 10px;
-}
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: rgba(49, 37, 28, 0.4);
-}
-.custom-scrollbar {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(49, 37, 28, 0.2) rgba(49, 37, 28, 0.05);
-}
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-cream); }
+::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 99px; border: 2px solid var(--color-cream); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-blush); }

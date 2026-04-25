@@ -79,3 +79,13 @@ function readableStreamFromBuffer(buffer) {
   stream.push(null);
   return stream;
 }
+
+export const deleteFileFromDrive = async (drive, fileId) => {
+  try {
+    await drive.files.delete({ fileId: fileId });
+    return true;
+  } catch (error) {
+    console.error('Error deleting file from Drive:', error);
+    return false;
+  }
+};

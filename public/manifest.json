@@ -1,0 +1,14 @@
+{
+  "name": "Gentle Ferry",
+  "short_name": "Gentle Ferry",
+  "description": "A calm, private journaling app. Write your day, attach photos to Google Drive, and keep memories forever.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFBF7",
+  "theme_color": "#E8837C",
+  "orientation": "portrait",
+  "categories": ["lifestyle", "productivity"],
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "48x48", "type": "image/x-icon" }
+  ]
+}
