@@ -74,9 +74,9 @@ export const metadata = {
   },
   manifest: '/manifest.json',
 
-  // Verification placeholders (fill in when live)
+  // Google Search Console verification
   verification: {
-    google: 'REPLACE_WITH_GOOGLE_SITE_VERIFICATION',
+    google: '2smjZ7m53bObxRYwPrEUxy52mOJ62HkcVBFt8FS3usM',
   },
 };
 
