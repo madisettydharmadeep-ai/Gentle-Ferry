@@ -116,7 +116,7 @@ export default function LandingPage() {
       <div className="relative z-10">
 
       {/* ── Header ── */}
-      <header className="px-8 py-5 flex justify-between items-center max-w-4xl mx-auto">
+      <header className="px-4 sm:px-8 py-4 sm:py-5 flex justify-between items-center max-w-4xl mx-auto">
         <div className="flex items-center gap-2.5 group">
           <div className="w-8 h-8 rounded-lg bg-blush-light flex items-center justify-center group-hover:rotate-12 transition-transform">
             <Heart className="w-4 h-4 text-blush fill-current" />
@@ -133,21 +133,21 @@ export default function LandingPage() {
       </header>
 
       {/* ── Main ── */}
-      <main className="max-w-4xl mx-auto px-8 pt-16 pb-24">
+      <main className="max-w-4xl mx-auto px-4 sm:px-8 pt-10 sm:pt-16 pb-16 sm:pb-24">
 
         {/* Hero */}
-        <section className="mb-20 animate-fadeIn">
+        <section className="mb-12 sm:mb-20 animate-fadeIn">
           {/* <div className="flex items-center gap-2 text-blush mb-6">
             <Heart className="w-3.5 h-3.5 fill-current" />
             <span className="text-sm font-medium">a tiny passion project</span>
           </div> */}
 
-          <h1 className="text-[3.5rem] md:text-[4.5rem] font-bold text-ink leading-[1.05] mb-7 tracking-[-0.03em] text-center">
+          <h1 className="text-[2rem] sm:text-[3rem] md:text-[4.5rem] font-bold text-ink leading-[1.08] mb-5 sm:mb-7 tracking-[-0.03em] text-center">
             Keep a little journal<br />
             for the days that matter.
           </h1>
 
-          <p className="text-lg text-center text-ink-soft leading-relaxed mb-10 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-center text-ink-soft leading-relaxed mb-7 sm:mb-10 max-w-3xl mx-auto">
             Gentle Ferry is a calm, private space to write.
             Add a photo, jot a few lines — your photos
             are saved safely to your own Google Drive.
@@ -186,11 +186,11 @@ export default function LandingPage() {
         </section>
 
         {/* Preview Cards */}
-        <section className="mb-24">
-          <h2 className="text-xs font-bold text-ink-faint uppercase tracking-[0.15em] mb-8">
+        <section className="mb-14 sm:mb-24">
+          <h2 className="text-xs font-bold text-ink-faint uppercase tracking-[0.15em] mb-5 sm:mb-8">
             made with Gentle Ferry
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-5">
             {TUTORIALS.map((c, i) => (
               <div 
                 key={i} 
@@ -231,8 +231,8 @@ export default function LandingPage() {
         </section>
 
         {/* Story */}
-        <section className="mb-24">
-          <div className="relative overflow-hidden rounded-3xl border border-line shadow-sm bg-gradient-to-br from-blush-light/50 via-cream to-honey-light/30 px-8 py-12 flex flex-col md:flex-row gap-10 items-center">
+        <section className="mb-14 sm:mb-24">
+          <div className="relative overflow-hidden rounded-3xl border border-line shadow-sm bg-gradient-to-br from-blush-light/50 via-cream to-honey-light/30 px-5 sm:px-8 py-8 sm:py-12 flex flex-col md:flex-row gap-6 sm:gap-10 items-center">
             {/* Circular avatar */}
             <div className="shrink-0 flex flex-col items-center gap-3">
               <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white shadow-lg ring-2 ring-blush/20">
@@ -276,8 +276,8 @@ export default function LandingPage() {
         </section>
 
         {/* What you can do */}
-        <section className="mb-24">
-          <span className="text-xs font-bold text-ink-faint uppercase tracking-[0.18em] mb-8 block">what you can do</span>
+        <section className="mb-14 sm:mb-24">
+          <span className="text-xs font-bold text-ink-faint uppercase tracking-[0.18em] mb-5 sm:mb-8 block">what you can do</span>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               { icon: ImagePlus, title: 'drop in photos', desc: 'Every image goes straight to your Google Drive — safe, private, yours.', accent: 'border-honey bg-honey/5', iconColor: 'text-[#8B6914] bg-honey/15' },
@@ -297,8 +297,8 @@ export default function LandingPage() {
         </section>
 
         {/* Pricing */}
-        <section className="mb-24">
-          <div className="mb-10">
+        <section className="mb-14 sm:mb-24">
+          <div className="mb-7 sm:mb-10">
             <span className="text-xs font-bold text-ink-faint uppercase tracking-[0.18em] mb-3 block">simple pricing</span>
             <h2 className="text-3xl md:text-4xl font-bold text-ink leading-tight tracking-[-0.02em]">
               free, forever.<br />
@@ -391,7 +391,7 @@ export default function LandingPage() {
         </section>
 
         {/* CTA */}
-        <section className="mb-8 px-8 -mx-8">
+        <section className="mb-8 px-0 sm:px-8 sm:-mx-8">
           <div className="relative overflow-hidden rounded-3xl border border-line shadow-sm min-h-[320px] flex flex-col md:flex-row">
             {/* Left image */}
             <div className="md:w-2/5 shrink-0 relative min-h-[220px] md:min-h-0">
@@ -405,7 +405,7 @@ export default function LandingPage() {
             {/* Right content */}
             <div className="flex-1 text-center bg-gradient-to-br from-blush-light/60 via-cream to-honey-light/40 flex flex-col justify-center iten-center px-10 py-12">
               <p className="text-xs font-bold text-ink-faint uppercase tracking-[0.2em] mb-3">psst...</p>
-              <p className="text-4xl md:text-5xl font-bold text-ink leading-tight mb-3">
+              <p className="text-3xl md:text-5xl font-bold text-ink leading-tight mb-3">
                 ready to start<br />your journal?
               </p>
               <p className="text-ink-soft mb-8 text-base">It only takes a second. No credit card, no fuss.</p>
@@ -514,14 +514,14 @@ export default function LandingPage() {
           onClick={() => setActiveTutorial(null)}
         >
           <div 
-             className="relative w-full max-w-4xl"
+             className="relative w-full max-w-4xl max-h-[80vh] overflow-y-auto rounded-2xl"
              onClick={e => e.stopPropagation()}
           >
              <button 
-                className="absolute -top-12 right-0 text-white hover:text-blush-light transition-colors flex items-center gap-2 font-medium"
+                className="sticky top-2 float-right mr-2 z-10 text-white hover:text-blush-light transition-colors flex items-center gap-2 font-medium bg-ink/40 px-3 py-1.5 rounded-full text-sm backdrop-blur-sm"
                 onClick={() => setActiveTutorial(null)}
              >
-                Close <X size={20} />
+                Close <X size={16} />
              </button>
              <PostcardView entry={{
                ...activeTutorial,
