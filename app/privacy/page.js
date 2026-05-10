@@ -40,7 +40,7 @@ export default function PrivacyPage() {
       title: 'google oauth & drive',
       color: 'text-sage bg-sage/10',
       border: 'border-sage/20',
-      content: `We use Google OAuth to sign you in securely and request scoped access to your Google Drive (only the files whimsical creates). We never access anything else in your Drive. You can revoke our access at any time from your Google account security settings.`,
+      content: `We use Google OAuth to sign you in securely and request scoped access to your Google Drive file API. The app only requests the minimum permissions it needs — your Google profile, email, and the Drive file scope used to save the photos you add. We never access anything else in your Drive. You can revoke our access at any time from your Google account security settings.`,
     },
     {
       icon: Trash2,

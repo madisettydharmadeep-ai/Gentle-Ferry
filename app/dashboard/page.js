@@ -7,6 +7,7 @@ import { AuthProvider, useAuth } from '../../utils/AuthContext';
 import Navbar from '../components/Navbar';
 import JournalCard from '../components/JournalCard';
 import AnimatedBackground from '../components/AnimatedBackground';
+import OnboardingTutorial from '../components/OnboardingTutorial';
 import { useWeather } from '../contexts/WeatherContext';
 import { AlertTriangle, CloudRain, CloudLightning, Snowflake, Sun } from 'lucide-react';
 
@@ -14,9 +15,21 @@ function DashboardContent() {
   const { user, loading } = useAuth();
   const router = useRouter();
   const { weather, setManualWeather } = useWeather();
+  const [showTutorial, setShowTutorial] = useState(false);
 
   useEffect(() => {
     if (!loading && !user) router.push('/');
+    
+    // Check if user is new (has no entries yet) and hasn't seen tutorial
+    if (!loading && user) {
+      const hasOnboarded = localStorage.getItem('gentle-ferry-onboarded');
+      const isNewUser = user.createdAt && 
+        (new Date() - new Date(user.createdAt)) < 24 * 60 * 60 * 1000; // Within 24 hours
+      
+      if (!hasOnboarded && isNewUser) {
+        setShowTutorial(true);
+      }
+    }
   }, [user, loading, router]);
 
   if (loading || !user) {
@@ -84,6 +97,11 @@ function DashboardContent() {
         <JournalCard />
 
       </main>
+
+      {/* Onboarding Tutorial for new users */}
+      {showTutorial && (
+        <OnboardingTutorial onComplete={() => setShowTutorial(false)} />
+      )}
     </div>
   );
 }

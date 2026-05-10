@@ -88,3 +88,6 @@
 ::-webkit-scrollbar-track { background: var(--color-cream); }
 ::-webkit-scrollbar-thumb { background: var(--color-line-strong); border-radius: 99px; border: 2px solid var(--color-cream); }
 ::-webkit-scrollbar-thumb:hover { background: var(--color-blush); }
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }

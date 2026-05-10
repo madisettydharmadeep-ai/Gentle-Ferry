@@ -486,7 +486,7 @@ export default function LandingPage() {
                 made with <Heart size={9} className="inline text-blush fill-current mx-0.5" /> and a lot of coffee — © 2026 Gentle Ferry
               </p>
               <div className="flex flex-wrap items-center gap-4 text-xs font-bold text-ink-faint uppercase tracking-[0.18em]">
-                <a href="#" className="hover:text-blush transition-colors">instagram</a>
+                <a href="/" className="hover:text-blush transition-colors">home</a>
                 <span className="text-line-strong">·</span>
                 <a href="/privacy" className="hover:text-ink transition-colors">privacy</a>
                 <span className="text-line-strong">·</span>

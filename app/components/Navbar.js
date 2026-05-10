@@ -73,6 +73,12 @@ export default function Navbar() {
         </Link>
       </div>
 
+      <div className="hidden md:flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] text-ink-soft">
+        <Link href="/privacy" className="hover:text-ink transition-colors">Privacy</Link>
+        <span className="text-line/60">·</span>
+        <Link href="/terms" className="hover:text-ink transition-colors">Terms</Link>
+      </div>
+
       {/* Right — avatar */}
       <div className="flex items-center gap-3 shrink-0">
         <Link href="/profile" className="rounded-full overflow-hidden hover:ring-2 hover:ring-blush transition-all block focus:outline-none focus:ring-2 focus:ring-blush">
