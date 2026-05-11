@@ -2,6 +2,7 @@
 
 import { Heart, ArrowLeft, FileText, UserCheck, ImageOff, AlertCircle, Handshake, Smile, Coffee } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import KoFiButton from '../../components/KoFiButton';
 
 export default function TermsPage() {
   const router = useRouter();
@@ -116,14 +117,11 @@ export default function TermsPage() {
           <p className="text-ink-soft text-sm leading-relaxed max-w-md mx-auto">
             Still confused? Totally fair — legal stuff is confusing. Just reach out and we'll explain in plain words.
           </p>
-          <a
-            href="https://buymeacoffee.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <KoFiButton
+            label="Support on Ko-fi"
+            description="Keep whimsical free with Ko-fi support"
             className="mt-5 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-honey-light/80 border border-honey/30 text-[11px] font-bold text-[#8B6914] uppercase tracking-wider hover:border-honey/60 hover:bg-honey-light transition-all"
-          >
-            <Coffee className="w-3 h-3" /> kept free by people like you
-          </a>
+          />
           <p className="mt-6 text-xs font-bold text-ink-faint uppercase tracking-[0.2em]">
             made with <Heart size={11} className="inline text-blush fill-current" /> 2026 whimsical
           </p>
