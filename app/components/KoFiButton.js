@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { Coffee } from "lucide-react";
+import { useEffect } from 'react';
+import { Coffee } from 'lucide-react';
 
-const DEFAULT_KOFI_USERNAME = "kazama_studiooo";
-const KOFI_SCRIPT_ID = "kofi-button-script";
-const KOFI_SCRIPT_SRC = "https://cdnjs.ko-fi.com/2.0.0/widget.js";
+const DEFAULT_KOFI_USERNAME = 'kazama_studiooo';
+const KOFI_SCRIPT_ID = 'kofi-button-script';
+const KOFI_SCRIPT_SRC = 'https://cdnjs.ko-fi.com/2.0.0/widget.js';
 
 function loadKoFiScript() {
-  if (typeof document === "undefined") return;
+  if (typeof document === 'undefined') return;
   if (document.getElementById(KOFI_SCRIPT_ID)) return;
 
-  const script = document.createElement("script");
+  const script = document.createElement('script');
   script.id = KOFI_SCRIPT_ID;
   script.src = KOFI_SCRIPT_SRC;
   script.async = true;
@@ -21,9 +21,9 @@ function loadKoFiScript() {
 
 export default function KoFiButton({
   username = DEFAULT_KOFI_USERNAME,
-  label = "Support on Ko-fi",
-  className = "",
-  description = "Support me on Ko-fi",
+  label = 'Support on Ko-fi',
+  className = '',
+  description = 'Support me on Ko-fi',
 }) {
   useEffect(() => {
     loadKoFiScript();
