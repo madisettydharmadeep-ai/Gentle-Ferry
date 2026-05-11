@@ -18,6 +18,7 @@ import {
   Download,
 } from "lucide-react";
 import { clsx } from "clsx";
+import KoFiButton from "../components/KoFiButton";
 
 function ProfileContent() {
   const { user, loading, logout } = useAuth();
@@ -313,25 +314,7 @@ function ProfileContent() {
           {/* Bottom Row - Support + Sign Out */}
           <div className="flex flex-col md:flex-row gap-4 pt-8 border-t border-stone-200/60">
             {/* Support Card */}
-            <a
-              href="https://ko-fi.com/kazama_studiooo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex-1 flex items-center gap-4 rounded-2xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-100 hover:border-amber-200 px-5 py-4 transition-all hover:shadow-md active:scale-[0.99]"
-            >
-              <div className="w-10 h-10 rounded-xl bg-white shadow-sm flex items-center justify-center shrink-0">
-                <Coffee className="w-4 h-4 text-amber-600" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-semibold text-stone-700">
-                  Enjoying Gentle Ferry?
-                </p>
-                <p className="text-xs text-stone-500">Support on Ko-fi</p>
-              </div>
-              <span className="text-xs font-semibold text-amber-600 group-hover:translate-x-0.5 transition-transform">
-                Support →
-              </span>
-            </a>
+            <KoFiButton />
 
             {/* Sign Out */}
             <button

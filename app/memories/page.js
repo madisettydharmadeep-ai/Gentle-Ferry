@@ -23,7 +23,6 @@ import {
   Coffee,
   Download,
 } from "lucide-react";
-import KoFiButton from "../components/KoFiButton";
 import { clsx } from "clsx";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
@@ -1162,11 +1161,15 @@ function MemoriesContent() {
               >
                 Write today
               </button>
-              <KoFiButton
-                label="Built with love — support on Ko-fi"
-                description="Built with love — support Gentle Ferry on Ko-fi"
+              <a
+                href="https://buymeacoffee.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-1.5 text-[11px] font-bold text-ink-faint hover:text-[#8B6914] transition-colors"
-              />
+              >
+                <Coffee className="w-3 h-3" /> built with love — buy me a
+                coffee?
+              </a>
             </div>
           )}
 

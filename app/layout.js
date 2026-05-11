@@ -1,6 +1,5 @@
 import "./globals.css";
 import { WeatherProvider } from "./contexts/WeatherContext";
-import KoFiOverlay from "./components/KoFiOverlay";
 
 const APP_URL = "https://gentleferry.com";
 
@@ -125,10 +124,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <WeatherProvider>
-          {children}
-          <KoFiOverlay />
-        </WeatherProvider>
+        <WeatherProvider>{children}</WeatherProvider>
       </body>
     </html>
   );

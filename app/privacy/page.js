@@ -2,7 +2,6 @@
 
 import { Heart, ArrowLeft, Shield, Database, Image, Lock, Eye, Trash2, Coffee } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import KoFiButton from '../../components/KoFiButton';
 
 export default function PrivacyPage() {
   const router = useRouter();
@@ -117,11 +116,14 @@ export default function PrivacyPage() {
           <p className="text-ink-soft text-sm leading-relaxed max-w-md mx-auto">
             Questions? Concerns? Just want to say hi? You know where to find us. whimsical is a tiny passion project — we genuinely care.
           </p>
-          <KoFiButton
-            label="Support on Ko-fi"
-            description="Keep whimsical free with Ko-fi support"
+          <a
+            href="https://buymeacoffee.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="mt-5 inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-honey-light/80 border border-honey/30 text-[11px] font-bold text-[#8B6914] uppercase tracking-wider hover:border-honey/60 hover:bg-honey-light transition-all"
-          />
+          >
+            <Coffee className="w-3 h-3" /> kept free by people like you
+          </a>
           <p className="mt-6 text-xs font-bold text-ink-faint uppercase tracking-[0.2em]">
             made with <Heart size={11} className="inline text-blush fill-current" /> 2026 whimsical
           </p>

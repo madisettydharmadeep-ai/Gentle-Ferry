@@ -1,54 +1,40 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { Coffee } from 'lucide-react';
+import React from "react";
+import Image from "next/image";
 
-const DEFAULT_KOFI_USERNAME = 'kazama_studiooo';
-const KOFI_SCRIPT_ID = 'kofi-button-script';
-const KOFI_SCRIPT_SRC = 'https://cdnjs.ko-fi.com/2.0.0/widget.js';
-
-function loadKoFiScript() {
-  if (typeof document === 'undefined') return;
-  if (document.getElementById(KOFI_SCRIPT_ID)) return;
-
-  const script = document.createElement('script');
-  script.id = KOFI_SCRIPT_ID;
-  script.src = KOFI_SCRIPT_SRC;
-  script.async = true;
-  script.defer = true;
-  document.body.appendChild(script);
-}
-
-export default function KoFiButton({
-  username = DEFAULT_KOFI_USERNAME,
-  label = 'Support on Ko-fi',
-  className = '',
-  description = 'Support me on Ko-fi',
-}) {
-  useEffect(() => {
-    loadKoFiScript();
-  }, []);
-
-  const href = `https://ko-fi.com/${username}`;
-
+const KoFiButton = ({ className = "" }) => {
   return (
-    <div
-      className={className}
-      data-name={username}
-      data-description={description}
-      data-color="#F1605D"
-      data-size="medium"
-      data-text={label}
+    <a
+      href="https://ko-fi.com/kazama_studiooo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+        group relative inline-flex items-center justify-center gap-3 
+        w-full py-3.5 px-6 rounded-xl 
+        bg-[#FFDD00] text-[#1a1a1a] 
+        font-bold text-sm text-center
+        transition-all duration-200
+        hover:brightness-95 hover:-translate-y-0.5
+        active:scale-[0.98] active:translate-y-0
+        shadow-[0_4px_0_0_#d9bc00] hover:shadow-[0_6px_0_0_#d9bc00]
+        active:shadow-none
+        ${className}
+      `}
     >
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2"
-      >
-        <Coffee className="w-3 h-3" />
-        <span>{label}</span>
-      </a>
-    </div>
+      <div className="flex items-center justify-center shrink-0">
+        <Image
+          src="/kofi_symbol.png"
+          alt="Ko-fi"
+          width={22}
+          height={22}
+          className="object-contain"
+          priority
+        />
+      </div>
+      <span>Support me on Ko-fi</span>
+    </a>
   );
-}
+};
+
+export default KoFiButton;

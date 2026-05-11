@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { useAuth } from "../../utils/AuthContext";
 import { useRouter } from "next/navigation";
+import KoFiButton from "./KoFiButton";
 import {
   ArrowRight,
   Heart,
@@ -23,7 +24,6 @@ import {
   Star,
 } from "lucide-react";
 import PostcardView from "./PostcardView";
-import KoFiButton from "./KoFiButton";
 
 const TUTORIALS = [
   {
@@ -207,11 +207,11 @@ export default function LandingPage() {
               few lines — your photos are saved safely to your own Google Drive.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-3">
+            <div className="w-full">
               <button
                 onClick={() => handleGoogleLogin()}
                 disabled={loading}
-                className="inline-flex items-center gap-2 bg-blush text-white px-7 py-3 rounded-full font-bold hover:bg-blush-hover transition-all active:scale-[0.97] disabled:opacity-60"
+                className="w-full inline-flex justify-center items-center gap-2 bg-blush text-white px-7 py-3 rounded-full font-bold hover:bg-blush-hover transition-all active:scale-[0.97] disabled:opacity-60"
               >
                 {loading ? (
                   <Loader2 size={18} className="animate-spin" />
@@ -222,11 +222,6 @@ export default function LandingPage() {
                   </>
                 )}
               </button>
-
-              <KoFiButton
-                label="Support on Ko-fi"
-                className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold bg-honey-light border-2 border-honey/40 text-[#8B6914] hover:scale-105 hover:shadow-[0_4px_20px_rgba(242,201,76,0.3)] hover:border-honey transition-all active:scale-[0.97] overflow-hidden"
-              />
             </div>
 
             {error && (
@@ -265,13 +260,6 @@ export default function LandingPage() {
               ✦ these are just little previews to show you what a journal entry
               feels like — the photos aren't mine and are placeholders only 🌸
             </p>
-
-            {/* BMAC #2 — bold banner strip */}
-            <KoFiButton
-              label="Support on Ko-fi →"
-              description="Keep Gentle Ferry free with Ko-fi support"
-              className="group mt-8 flex items-center justify-between gap-4 w-full rounded-2xl bg-honey-light/60 border-2 border-honey/30 hover:border-honey/60 px-6 py-4 transition-all hover:shadow-md hover:-translate-y-0.5 active:scale-[0.99]"
-            />
           </section>
 
           {/* Story */}
@@ -328,21 +316,6 @@ export default function LandingPage() {
                     </span>
                   ))}
                 </div>
-
-                {/* BMAC #3 — glowing pill CTA */}
-                <a
-                  href="https://ko-fi.com/kazama_studiooo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-honey-light to-blush-light border border-honey/30 text-[#8B6914] font-bold text-sm shadow-[0_2px_12px_rgba(242,201,76,0.2)] hover:shadow-[0_4px_20px_rgba(242,201,76,0.3)] hover:-translate-y-0.5 transition-all active:scale-95"
-                >
-                  <Coffee className="w-4 h-4" />
-                  keeping this free costs me real money — support it on Ko-fi?
-                  <ArrowRight
-                    className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"
-                    strokeWidth={3}
-                  />
-                </a>
               </div>
             </div>
           </section>
@@ -504,11 +477,7 @@ export default function LandingPage() {
                     genuinely mean the world to me. no pressure — ever.
                   </p>
 
-                  <KoFiButton
-                    label="Support on Ko-fi"
-                    description="Support Gentle Ferry on Ko-fi"
-                    className="mt-auto w-full py-3.5 rounded-xl bg-[#FFDD00] text-[#1a1a1a] font-bold text-sm text-center hover:brightness-95 transition-all active:scale-[0.98] shadow-sm flex items-center justify-center gap-2"
-                  />
+                  <KoFiButton />
                 </div>
               </div>
             </div>
@@ -684,10 +653,6 @@ export default function LandingPage() {
                 </div>
               </div>
               {/* BMAC #4 — full-width on mobile, auto on desktop */}
-              <KoFiButton
-                label="Support on Ko-fi"
-                className="inline-flex items-center justify-center sm:justify-start gap-1.5 px-3 py-2 rounded-full bg-honey-light border border-honey/40 text-[#8B6914] font-bold text-[10px] uppercase tracking-wider hover:bg-honey/20 hover:scale-105 transition-all shadow-sm w-full sm:w-auto"
-              />
             </div>
           </div>
         </footer>
