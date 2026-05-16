@@ -99,7 +99,7 @@ export default function PrivacyPage() {
         {/* Sections */}
         <div className="flex flex-col gap-5">
           {sections.map((s) => (
-            <div key={s.title} className={`rounded-2xl border ${s.border} bg-white/70 backdrop-blur p-6 flex gap-5 items-start shadow-sm`}>
+            <div key={s.title} className={`rounded-lg border ${s.border} bg-white/70 backdrop-blur p-6 flex gap-5 items-start shadow-sm`}>
               <span className={`shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${s.color}`}>
                 <s.icon className="w-5 h-5" strokeWidth={2} />
               </span>

@@ -150,7 +150,7 @@ function CollectionsContent() {
 
         {/* Create Collection Form */}
         {isCreating && (
-          <div className="mb-8 p-5 bg-card rounded-2xl border border-line shadow-sm">
+          <div className="mb-8 p-5 bg-card rounded-lg border border-line shadow-sm">
             <form onSubmit={createCollection} className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-ink mb-2">Collection name</label>

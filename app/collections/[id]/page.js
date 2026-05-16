@@ -119,7 +119,7 @@ function CollectionDetailContent() {
 
         {/* Entries grid */}
         {entries.length === 0 ? (
-          <div className="flex flex-col items-center gap-3 py-20 text-center bg-white/20 backdrop-blur-3xl border border-white/30 rounded-3xl">
+          <div className="flex flex-col items-center gap-3 py-20 text-center bg-white/20 backdrop-blur-3xl border border-white/30 rounded-lg">
             <div className="w-14 h-14 rounded-full bg-white/50 flex items-center justify-center">
               <FolderOpen size={22} className="text-ink-faint" />
             </div>
@@ -139,7 +139,7 @@ function CollectionDetailContent() {
                 <div
                   key={entry._id}
                   onClick={() => openModal(entry)}
-                  className="group relative bg-card rounded-2xl p-4 pb-12 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer overflow-hidden border border-line"
+                  className="group relative bg-card rounded-lg p-4 pb-12 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer overflow-hidden border border-line"
                 >
                   {/* Date + mood */}
                   <div className="flex items-center justify-between mb-3">
@@ -201,10 +201,10 @@ function CollectionDetailContent() {
 
             {/* Stacked ghost cards */}
             {selectedEntries.length > 2 && (
-              <div className="absolute inset-x-12 top-16 h-[440px] bg-white/40 border-2 border-white/40 rounded-2xl scale-[0.94] blur-[1px] z-0 shadow-2xl -rotate-2" style={{ transformOrigin: 'bottom center' }} />
+              <div className="absolute inset-x-12 top-16 h-[440px] bg-white/40 border-2 border-white/40 rounded-lg scale-[0.94] blur-[1px] z-0 shadow-2xl -rotate-2" style={{ transformOrigin: 'bottom center' }} />
             )}
             {selectedEntries.length > 1 && (
-              <div className="absolute inset-x-6 top-8 h-[440px] bg-white/60 border-2 border-white/60 rounded-2xl scale-[0.97] blur-[0.5px] z-[10] shadow-2xl rotate-1" style={{ transformOrigin: 'bottom center' }} />
+              <div className="absolute inset-x-6 top-8 h-[440px] bg-white/60 border-2 border-white/60 rounded-lg scale-[0.97] blur-[0.5px] z-[10] shadow-2xl rotate-1" style={{ transformOrigin: 'bottom center' }} />
             )}
 
             <div className="relative animate-[slideUpFade_0.4s_ease-out] z-[20] w-full shadow-[0_20px_50px_rgba(0,0,0,0.15)]">

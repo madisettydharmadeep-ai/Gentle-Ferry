@@ -93,7 +93,7 @@ export default function CameraCropper({ rawImage, onCrop, onCancel }) {
       onClick={onCancel}
     >
       <div
-        className="relative w-full max-w-[480px] bg-white/5 rounded-2xl border border-white/10 flex flex-col items-center justify-center touch-none select-none p-0 overflow-hidden shadow-2xl"
+        className="relative w-full max-w-[480px] bg-white/5 rounded-lg border border-white/10 flex flex-col items-center justify-center touch-none select-none p-0 overflow-hidden shadow-2xl"
         onClick={(e) => e.stopPropagation()}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}

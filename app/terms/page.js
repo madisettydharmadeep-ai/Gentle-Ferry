@@ -125,7 +125,7 @@ export default function TermsPage() {
           {sections.map((s) => (
             <div
               key={s.title}
-              className={`rounded-2xl border ${s.border} bg-white/70 backdrop-blur p-6 flex gap-5 items-start shadow-sm`}
+              className={`rounded-lg border ${s.border} bg-white/70 backdrop-blur p-6 flex gap-5 items-start shadow-sm`}
             >
               <span
                 className={`shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${s.color}`}

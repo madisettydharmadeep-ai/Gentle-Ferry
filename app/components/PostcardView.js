@@ -180,7 +180,7 @@ export default function PostcardView({ entry, onDelete }) {
   };
 
   return (
-    <div className="bg-card border border-line shadow-md flex flex-col md:flex-row h-auto md:h-[440px] relative rounded-2xl" style={{overflow: 'clip'}}>
+    <div className="bg-card border border-line shadow-md flex flex-col md:flex-row h-auto md:h-[440px] relative rounded-lg" style={{overflow: 'clip'}}>
 
       {/* ── Left: Image — 4:3 ── */}
       {imageSrc && (
@@ -308,7 +308,7 @@ export default function PostcardView({ entry, onDelete }) {
       {/* ── Dangerous Action Modal Overlay ── */}
       {isConfirmingDelete && (
         <div className="absolute inset-0 z-50 bg-ink/70 backdrop-blur-md flex items-center justify-center p-6 animate-fadeIn">
-          <div className="bg-card max-w-[400px] w-full rounded-2xl p-6 shadow-2xl border border-line-strong flex flex-col">
+          <div className="bg-card max-w-[400px] w-full rounded-lg p-6 shadow-2xl border border-line-strong flex flex-col">
             <div className="w-12 h-12 rounded-full bg-[#FF453A]/10 flex items-center justify-center text-[#FF453A] mb-4">
                <AlertTriangle size={24} strokeWidth={2.5} />
             </div>

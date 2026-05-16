@@ -638,7 +638,7 @@ function MemoriesContent() {
 
             {/* Month pill with tooltip */}
             <div className="relative group">
-              <span className="text-lg font-bold text-ink flex items-baseline gap-1.5 bg-white/40 px-5 py-2 rounded-2xl backdrop-blur-md shadow-sm border border-white/30 cursor-default select-none">
+              <span className="text-lg font-bold text-ink flex items-baseline gap-1.5 bg-white/40 px-5 py-2 rounded-lg backdrop-blur-md shadow-sm border border-white/30 cursor-default select-none">
                 {MONTHS[viewMonth - 1]}{" "}
                 <span className="text-sm text-ink-soft font-medium">
                   {viewYear}
@@ -646,7 +646,7 @@ function MemoriesContent() {
               </span>
               {/* Tooltip */}
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-50">
-                <div className="bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl px-4 py-3 flex items-center gap-4 whitespace-nowrap">
+                <div className="bg-white/80 backdrop-blur-xl border border-white/40 shadow-xl rounded-lg px-4 py-3 flex items-center gap-4 whitespace-nowrap">
                   <div className="text-center">
                     <p className="text-base font-bold text-ink leading-none">
                       {entries.length}
@@ -841,7 +841,7 @@ function MemoriesContent() {
                     <div
                       key={entry._id || idx}
                       onClick={() => openEntries([entry])}
-                      className="group relative bg-white/60 backdrop-blur-xl border border-white/50 rounded-2xl p-4 pb-12 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer overflow-hidden"
+                      className="group relative bg-white/60 backdrop-blur-xl border border-white/50 rounded-lg p-4 pb-12 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all cursor-pointer overflow-hidden"
                     >
                       {/* Header with date */}
                       <div className="flex items-center justify-between mb-3">
@@ -898,7 +898,7 @@ function MemoriesContent() {
 
             {/* No results */}
             {!isSearching && entries.length === 0 && (
-              <div className="flex flex-col items-center gap-3 py-12 text-center bg-white/20 backdrop-blur-3xl border border-white/30 rounded-3xl">
+              <div className="flex flex-col items-center gap-3 py-12 text-center bg-white/20 backdrop-blur-3xl border border-white/30 rounded-lg">
                 <div className="w-12 h-12 rounded-full bg-white/50 flex items-center justify-center">
                   <Search size={20} className="text-ink-faint" />
                 </div>
@@ -1090,7 +1090,7 @@ function MemoriesContent() {
             };
 
             return (
-              <div className="bg-[#f7f3ed]/70 backdrop-blur-3xl border border-[#e8e0d5] overflow-hidden shadow-xl rounded-2xl w-full">
+              <div className="bg-[#f7f3ed]/70 backdrop-blur-3xl border border-[#e8e0d5] overflow-hidden shadow-xl rounded-lg w-full">
                 {/* ── MOBILE: transposed — weekdays as row labels, weeks as columns ── */}
                 <div className="md:hidden p-2">
                   {WEEKDAYS.map((w, wdIdx) => (
@@ -1140,7 +1140,7 @@ function MemoriesContent() {
           entries.length === 0 &&
           !fetching &&
           !searchQuery.trim() && (
-            <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-[2.5rem] relative z-10">
+            <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-lg relative z-10">
               <div className="w-14 h-14 rounded-full bg-white/50 shadow-sm flex items-center justify-center mb-2">
                 <PenLine
                   size={24}
@@ -1175,7 +1175,7 @@ function MemoriesContent() {
 
         {/* ── View: People ── */}
         {activeTab === "people" && peopleList.length === 0 && (
-          <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-[2.5rem] relative z-10">
+          <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-lg relative z-10">
             <div className="w-14 h-14 rounded-full bg-white/50 shadow-sm flex items-center justify-center mb-2">
               <Users size={24} strokeWidth={1.5} className="text-blue-500" />
             </div>
@@ -1212,7 +1212,7 @@ function MemoriesContent() {
 
         {/* ── View: Places ── */}
         {activeTab === "places" && placesList.length === 0 && (
-          <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-[2.5rem] relative z-10">
+          <div className="flex flex-col items-center gap-2 py-16 px-6 text-center w-full mt-10 bg-white/20 backdrop-blur-3xl border border-white/30 shadow-xl rounded-lg relative z-10">
             <div className="w-14 h-14 rounded-full bg-white/50 shadow-sm flex items-center justify-center mb-2">
               <MapPin
                 size={24}
@@ -1349,13 +1349,13 @@ function MemoriesContent() {
               {/* Ghost cards behind */}
               {selectedEntries.length > 2 && (
                 <div
-                  className="absolute inset-x-12 top-16 h-[440px] bg-white/40 border-2 border-white/40 rounded-2xl scale-[0.94] blur-[1px] z-0 shadow-2xl -rotate-2"
+                  className="absolute inset-x-12 top-16 h-[440px] bg-white/40 border-2 border-white/40 rounded-lg scale-[0.94] blur-[1px] z-0 shadow-2xl -rotate-2"
                   style={{ transformOrigin: "bottom center" }}
                 />
               )}
               {selectedEntries.length > 1 && (
                 <div
-                  className="absolute inset-x-6 top-8 h-[440px] bg-white/60 border-2 border-white/60 rounded-2xl scale-[0.97] blur-[0.5px] z-[10] shadow-2xl rotate-1"
+                  className="absolute inset-x-6 top-8 h-[440px] bg-white/60 border-2 border-white/60 rounded-lg scale-[0.97] blur-[0.5px] z-[10] shadow-2xl rotate-1"
                   style={{ transformOrigin: "bottom center" }}
                 />
               )}

@@ -98,7 +98,7 @@ export default function OnboardingTutorial({ onComplete }) {
     >
       <div 
         className={clsx(
-          "relative w-full max-w-[750px] bg-white rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row transition-transform duration-500",
+          "relative w-full max-w-[750px] bg-white rounded-lg shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col md:flex-row transition-transform duration-500",
           isExiting ? "translate-y-8 scale-95" : "translate-y-0 scale-100"
         )}
         onClick={e => e.stopPropagation()}
@@ -132,7 +132,7 @@ export default function OnboardingTutorial({ onComplete }) {
             <div 
               key={`icon-${current}`}
               className={clsx(
-                "relative z-10 w-28 h-28 rounded-[2rem] bg-gradient-to-br flex items-center justify-center shadow-2xl transition-all duration-500",
+                "relative z-10 w-28 h-28 rounded-lg bg-gradient-to-br flex items-center justify-center shadow-2xl transition-all duration-500",
                 slide.color,
                 slide.shadow,
                 slide.tilt

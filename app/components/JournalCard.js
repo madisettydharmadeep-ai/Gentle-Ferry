@@ -346,7 +346,7 @@ export default function JournalCard({ onSaved }) {
     <>
       <div
         className={clsx(
-          "bg-card border border-line shadow-md overflow-hidden transition-all hover:shadow-lg rounded-2xl",
+          "bg-card border border-line shadow-md overflow-hidden transition-all hover:shadow-lg rounded-lg",
           "flex flex-col md:flex-row h-auto md:h-[440px]",
           dragOver && "border-blush shadow-[0_0_0_3px_rgba(232,131,124,0.15)]",
         )}
@@ -404,7 +404,7 @@ export default function JournalCard({ onSaved }) {
             </>
           ) : (
             <div className="flex flex-col items-center gap-3 text-ink-faint py-12">
-              <div className="w-16 h-16 rounded-2xl bg-line/50 flex items-center justify-center">
+              <div className="w-16 h-16 rounded-lg bg-line/50 flex items-center justify-center">
                 <ImagePlus size={28} strokeWidth={1.3} />
               </div>
               <div className="text-center">

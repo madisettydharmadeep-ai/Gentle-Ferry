@@ -13,7 +13,7 @@ export default function SaveOverlay({ saving, saved }) {
       {/* Subtle backdrop dim */}
       <div className="absolute inset-0 bg-ink/10 backdrop-blur-[2px]" />
       
-      <div className="relative bg-white/80 backdrop-blur-3xl border border-white/50 shadow-2xl rounded-[2.5rem] p-10 flex flex-col items-center text-center w-64 animate-[scaleIn_0.3s_ease-out] pointer-events-auto">
+      <div className="relative bg-white/80 backdrop-blur-3xl border border-white/50 shadow-2xl rounded-lg p-10 flex flex-col items-center text-center w-64 animate-[scaleIn_0.3s_ease-out] pointer-events-auto">
         {saving ? (
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-blush/10 flex items-center justify-center mb-5">

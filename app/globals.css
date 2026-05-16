@@ -80,7 +80,29 @@
     from { opacity: 0; transform: translateY(12px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-  .animate-fadeIn { animation: fadeIn 400ms ease-out both; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+  @keyframes gleam {
+    0%   { left: -100%; opacity: 0; }
+    50%  { opacity: 0.3; }
+    100% { left: 100%; opacity: 0; }
+  }
+
+  .animate-fadeIn { animation: fadeIn 600ms cubic-bezier(0.16, 1, 0.3, 1) both; }
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-gleam { position: relative; overflow: hidden; }
+  .animate-gleam::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.4), transparent);
+    transform: skewX(-20deg);
+    animation: gleam 3s infinite;
+  }
 }
 
 /* ── Scrollbar ── */
