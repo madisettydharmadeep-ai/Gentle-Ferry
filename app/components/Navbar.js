@@ -100,7 +100,7 @@ export default function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden md:flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] text-ink-soft">
+      {/* <div className="hidden md:flex items-center gap-4 text-[11px] uppercase tracking-[0.18em] text-ink-soft">
         <Link href="/privacy" className="hover:text-ink transition-colors">
           Privacy
         </Link>
@@ -108,7 +108,7 @@ export default function Navbar() {
         <Link href="/terms" className="hover:text-ink transition-colors">
           Terms
         </Link>
-      </div>
+      </div> */}
 
       {/* Right — avatar */}
       <div className="flex items-center gap-3 shrink-0">

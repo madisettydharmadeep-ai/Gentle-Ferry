@@ -22,12 +22,16 @@ function DashboardContent() {
     
     // Check if user is new (has no entries yet) and hasn't seen tutorial
     if (!loading && user) {
-      const hasOnboarded = localStorage.getItem('gentle-ferry-onboarded');
-      const isNewUser = user.createdAt && 
-        (new Date() - new Date(user.createdAt)) < 24 * 60 * 60 * 1000; // Within 24 hours
-      
-      if (!hasOnboarded && isNewUser) {
+      if (process.env.NEXT_PUBLIC_APP_MODE !== 'prod') {
         setShowTutorial(true);
+      } else {
+        const hasOnboarded = localStorage.getItem('gentle-ferry-onboarded');
+        const isNewUser = user.createdAt && 
+          (new Date() - new Date(user.createdAt)) < 24 * 60 * 60 * 1000; // Within 24 hours
+        
+        if (!hasOnboarded && isNewUser) {
+          setShowTutorial(true);
+        }
       }
     }
   }, [user, loading, router]);
