@@ -745,29 +745,31 @@ export default function LandingPage() {
             onClick={() => setActiveTutorial(null)}
           >
             <div
-              className="relative w-full max-w-4xl max-h-[80vh] overflow-y-auto rounded-lg"
+              className="relative w-full max-w-4xl max-h-[90vh] flex flex-col md:pt-10"
               onClick={(e) => e.stopPropagation()}
             >
               <button
-                className="sticky top-2 float-right mr-2 z-10 text-white hover:text-blush-light transition-colors flex items-center gap-2 font-medium bg-ink/40 px-3 py-1.5 rounded-full text-sm backdrop-blur-sm"
+                className="absolute md:top-0 md:right-0 top-4 right-4 z-50 w-8 h-8 md:w-9 md:h-9 rounded-full bg-white border border-line text-ink-soft flex items-center justify-center shadow-lg transition-all hover:bg-ink hover:text-cream hover:rotate-90 pointer-events-auto backdrop-blur-sm"
                 onClick={() => setActiveTutorial(null)}
               >
-                Close <X size={16} />
+                <X size={14} strokeWidth={3} />
               </button>
-              <PostcardView
-                entry={{
-                  ...activeTutorial,
-                  highlights: activeTutorial.highlights?.map((h) => {
-                    if (typeof h.phrase === "string") {
-                      const start = activeTutorial.text.indexOf(h.phrase);
-                      if (start !== -1) {
-                        return { ...h, start, end: start + h.phrase.length };
+              <div className="w-full overflow-y-auto rounded-lg shadow-2xl">
+                <PostcardView
+                  entry={{
+                    ...activeTutorial,
+                    highlights: activeTutorial.highlights?.map((h) => {
+                      if (typeof h.phrase === "string") {
+                        const start = activeTutorial.text.indexOf(h.phrase);
+                        if (start !== -1) {
+                          return { ...h, start, end: start + h.phrase.length };
+                        }
                       }
-                    }
-                    return h;
-                  }),
-                }}
-              />
+                      return h;
+                    }),
+                  }}
+                />
+              </div>
             </div>
           </div>
         )}
