@@ -30,7 +30,7 @@ export function AuthProvider({ children }) {
         _id: 'test-user-id-abcdef',
         name: 'Kazama',
         email: 'kazama@whimsical.com',
-        createdAt: new Date().toISOString()
+        createdAt: '2026-02-14T14:30:00.000Z' // Hardcoded to Valentine's Day 2026 for consistent cozy manifest data!
       });
     }
     setLoading(false);

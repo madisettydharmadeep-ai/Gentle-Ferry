@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { 
   AtSign, Calendar, Highlighter, FolderHeart, 
-  Award, ArrowRight, ArrowLeft, X, Heart 
+  Award, ArrowRight, ArrowLeft, X, Heart, Sparkles
 } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -47,6 +47,14 @@ const slides = [
     color: 'from-violet-400 to-fuchsia-400',
     shadow: 'shadow-violet-300/50',
     tilt: '-rotate-6'
+  },
+  {
+    icon: Sparkles,
+    title: 'Monthly Recap Stories',
+    text: 'Revisit your months with custom, cinematic Wrapped summaries highlighting your top moods, connections, and places.',
+    color: 'from-purple-400 to-indigo-500',
+    shadow: 'shadow-purple-300/50',
+    tilt: 'rotate-3'
   },
   {
     icon: Award,
